@@ -1,0 +1,17 @@
+{
+    "name": "My extension",
+    "description": "My first extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://steamcommunity.com/id/*/friends/",
+           "https://steamcommunity.com/profiles/*/friends/"],
+          "js": ["content.js"]
+        }
+    ]
+}
